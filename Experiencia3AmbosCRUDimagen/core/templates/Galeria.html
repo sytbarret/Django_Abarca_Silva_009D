@@ -1,0 +1,337 @@
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    {% load static %}
+    <link rel="stylesheet" href={% static 'css/Estilos.css'%}>
+    
+       <!-- Latest compiled and minified CSS -->
+       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+
+       <!-- jQuery library -->
+       <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+   
+       <!-- Popper JS -->
+       <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+   
+       <!-- Latest compiled JavaScript -->
+       <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.js"></script>
+   
+    <link rel="shortcut icon" href={% static 'img/logoPrincipal.png'%}>
+    <title>Pet Paradise</title>
+  </head>
+  <body id="bg" style="background-image: url('{% static "img/fondo.jpg" %}');">
+    {% load static %}
+    <header>
+      <div class="container-fluid">
+          <div class="row" >
+            <div class="col-xl-4"  style="background-color:white">
+                    <a href={% url 'Inicio' %}>  <!--PENDIENTE-->
+                      <img src={% static 'img/logoPrincipal.png'%} width="100" height="100" class="d-inline-block align-top" alt="">                  
+                    </a>
+            </div>
+            <thead>
+              <div class="col-xl-4"  style="background-color:white">
+                <table class="default">
+
+                  <tr>                   
+                    <td></td>                   
+                    <td><h1 id="tituloPrincipal">Pet Paradise</h1></td>                    
+                    <td></td>                   
+                  </tr>
+                <br>
+                <br>
+                  <tr>                    
+                    <td></td>                   
+                    <td><h5 id="paraTexto">Fundación sin fines de lucro</h5></td>                    
+                    <td></td>                    
+                  </tr>
+                </table>
+            </div>
+            <div class="col-xl-4"  style="background-color:white">
+            </div>        
+            </div>
+        </div>
+   </div>
+</header>
+
+<main>
+  <hr>
+
+  <hr>
+
+  <div class="container-fluid" id="navegador">
+    
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href={% url 'Inicio' %}>
+      <img src={% static 'img/logo.png'%} alt="" width="100px" height="100px">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href={% url 'Inicio'%}>Inicio <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href={% url 'Registro'%}>Registrate</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href={% url 'Galeria'%}>Productos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href={% url 'Somos'%}>Quienes Somos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href={% url 'Contacto'%}>Contacto</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href={% url 'calculadora'%}>Utilidades</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" href={% url 'apiMonedas'%}>Valor Moneda</a>
+      </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+
+<hr>
+<hr>
+<h1 id=txtVentas>Nuestros Productos</h1>
+<br>
+
+<div class="container-fluid">
+  <h1 id="tituloProducto">Bandanas</h1>
+  <hr>
+  <div class="card-deck">
+  <div class="card">
+    <img src={% static 'img/bandanaProducto1.jpg' %} class="card-img-top" alt="..." width="300px" height="300px">
+    <div class="card-body">
+      <h5 class="card-title">BANDANA BOO</h5>
+      <h3>$3.990</h3>
+      <p class="card-text">Bandana con diseño de halloween. <br>
+        Cómodas en un textil suave, 
+        ligero e hipolergenico para perritos y gatitos.
+        Ajustable, cómoda  y fresca. Ponle un toque de diseño  a tu peludito.</p>
+    </div>
+    <div class="container">
+      <img src={% static 'img/añadirLogo.png' %} alt="" width="30px" height="30px"
+      style=" margin-left: 15px;">
+      <a href="#" class="btn btn-primary">Añadir al carro</a>
+      <img src={% static 'img/comprarLogo.png' %} alt="" width="30px" height="30px"
+      style=" margin-left: 15px;">
+      <a href="#" class="btn btn-primary">Comprar</a>
+    </div>
+    </div>
+   <div class="card">
+      <img src={% static 'img/bandanaProducto2.jpg' %} class="card-img-top" alt="..." width="300px" height="300px">
+      <div class="card-body">
+      <h5 class="card-title">BANDANA CANDY II</h5>
+      <h3>$3.990</h3>
+      <p class="card-text">Bandana con diseño de halloween. <br>
+        Cómodas en un textil suave, 
+        ligero e hipolergenico para perritos y gatitos.
+        Ajustable, cómoda  y fresca. Ponle un toque de diseño  a tu peludito.</p>
+      </div>
+      <div class="container">
+        <img src={% static 'img/añadirLogo.png' %} alt="" width="30px" height="30px"
+        style=" margin-left: 15px;">
+        <a href="#" class="btn btn-primary">Añadir al carro</a>
+        <img src={% static 'img/comprarLogo.png' %} alt="" width="30px" height="30px"
+        style=" margin-left: 15px;">
+        <a href="#" class="btn btn-primary">Comprar</a>
+      </div>
+      </div>
+      <div class="card">
+      <img src={% static 'img/bandanaProducto3.jpg' %} class="card-img-top" alt="..." width="300px" height="300px">
+      <div class="card-body">
+        <h5 class="card-title">BANDANA SCARY CAT</h5>
+        <h3>$3.990</h3>
+        <p class="card-text">Bandana con diseño de halloween. <br>
+          Cómodas en un textil suave, 
+          ligero e hipolergenico para perritos y gatitos.
+          Ajustable, cómoda  y fresca. Ponle un toque de diseño  a tu peludito.</p>
+      </div>
+      <div class="container">
+        <img src={% static 'img/añadirLogo.png' %} alt="" width="30px" height="30px"
+        style=" margin-left: 15px;">
+        <a href="#" class="btn btn-primary">Añadir al carro</a>
+        <img src={% static 'img/comprarLogo.png' %} alt="" width="30px" height="30px"
+        style=" margin-left: 15px;">
+        <a href="#" class="btn btn-primary">Comprar</a>
+      </div>
+      </div>
+  </div>
+  <br>
+  <div class="container-fluid">
+    <h1 id="tituloProducto">Correas</h1>
+    <hr>
+    <div class="card-deck">
+    <div class="card">
+      <img src={% static 'img/correaProducto1.jpg' %} class="card-img-top" alt="..." width="300px" height="300px">
+      <div class="card-body">
+        <h5 class="card-title">ZEEDOG STRANGER THINGS HAWKINS STRANGER AIR MESH ARNES
+        </h5>
+        <h3>$14.990</h3>
+        <p class="card-text">Zee.Dog Hawkins Stranger 
+          Things Adjustable Mesh Plus Harness es un arnés acolchado, suave, cómodo y resistente.</p>
+      </div>
+      <div class="container">
+        <img src={% static 'img/añadirLogo.png' %} alt="" width="30px" height="30px"
+        style=" margin-left: 15px;">
+        <a href="#" class="btn btn-primary">Añadir al carro</a>
+        <img src={% static 'img/comprarLogo.png' %} alt="" width="30px" height="30px"
+        style=" margin-left: 15px;">
+        <a href="#" class="btn btn-primary">Comprar</a>
+      </div>
+      </div>
+     <div class="card">
+        <img src={% static 'img/correaProducto2.jpg' %} class="card-img-top" alt="..." width="300px" height="300px">
+        <div class="card-body">
+        <h5 class="card-title">ZEDOOG NARA AIR MESH ARNES </h5>
+        <h3>$13.990        </h3>
+        <p class="card-text">Totalmente ajustable tanto en pecho como en cuello.<br> 
+          Fácil de poner y quitar gracias a su sistema con cierre en 4 puntos. </p>
+        </div>
+        <div class="container">
+          <img src={% static 'img/añadirLogo.png' %} alt="" width="30px" height="30px"
+          style=" margin-left: 15px;">
+          <a href="#" class="btn btn-primary">Añadir al carro</a>
+          <img src={% static 'img/comprarLogo.png' %} alt="" width="30px" height="30px"
+          style=" margin-left: 15px;">
+          <a href="#" class="btn btn-primary">Comprar</a>
+        </div>
+        </div>
+        <div class="card">
+        <img src={% static 'img/correaProducto3.jpg' %} class="card-img-top" alt="..." width="300px" height="300px">
+        <div class="card-body">
+          <h5 class="card-title">ZEEDOG PINNA LEASH</h5>
+          <h3>$3.990</h3>
+          <p class="card-text">Zee.Dog Pinna Dog Leash es una correa para perros <br>
+             diseño exclusivo. Las costuras del asa y del mosquetón están protegidas <br>
+              bajo el icónico parche Zee.Dog.</p>
+        </div>
+        <div class="container">
+          <img src={% static 'img/añadirLogo.png' %} alt="" width="30px" height="30px"
+          style=" margin-left: 15px;">
+          <a href="#" class="btn btn-primary">Añadir al carro</a>
+          <img src={% static 'img/comprarLogo.png' %} alt="" width="30px" height="30px"
+          style=" margin-left: 15px;">
+          <a href="#" class="btn btn-primary">Comprar</a>
+        </div>
+        </div>
+    </div>
+    <br>
+    <div class="container-fluid">
+      <h1 id="tituloProducto">Identificaciones</h1>
+      <hr>
+      <div class="card-deck">
+      <div class="card">
+        <img src={% static 'img/id1Producto.jpg' %} class="card-img-top" alt="..." width="300px" height="300px">
+        <div class="card-body">
+          <h5 class="card-title">MEXICANA</h5>
+          <h3>$6.990</h3>
+          <p class="card-text">¡Llegaron las plaquitas más cooles a Pet World! <br>
+             Diseños para todos los gustos y situaciones. <br>
+              Identifica a tu pelud@ con todo el estilo de las Pet World.
+            <br>
+            <strong>Incluyen: Estampado de Nombre y Grabado de teléfonos</strong></p>
+        </div>
+        <div class="container">
+          <img src={% static 'img/añadirLogo.png' %} alt="" width="30px" height="30px"
+          style=" margin-left: 15px;">
+          <a href="#" class="btn btn-primary">Añadir al carro</a>
+          <img src={% static 'img/comprarLogo.png' %} alt="" width="30px" height="30px"
+          style=" margin-left: 15px;">
+          <a href="#" class="btn btn-primary">Comprar</a>
+        </div>
+        </div>
+       <div class="card">
+          <img src={% static 'img/id2Producto.jpg' %} class="card-img-top" alt="..." width="300px" height="300px">
+          <div class="card-body">
+          <h5 class="card-title">REDONDA ACERO INOXIDABLE GRANDE</h5>
+          <h3>$5.990</h3>
+          <p class="card-text">Placa de Identificación para mascotas de razas grandes <br>
+                               grabada bajo relieve con 1 nombre y 2 teléfonos.
+          </div>
+          <div class="container">
+            <img src={% static 'img/añadirLogo.png' %} alt="" width="30px" height="30px"
+            style=" margin-left: 15px;">
+            <a href="#" class="btn btn-primary">Añadir al carro</a>
+            <img src={% static 'img/comprarLogo.png' %} alt="" width="30px" height="30px"
+            style=" margin-left: 15px;">
+            <a href="#" class="btn btn-primary">Comprar</a>
+          </div>
+          </div>
+          <div class="card">
+          <img src={% static 'img/id3Producto.jpg' %} class="card-img-top" alt="..." width="300px" height="300px">
+          <div class="card-body">
+            <h5 class="card-title">HUESO MEDIANO DE ALUMINIO MIX COLORES</h5>
+            <h3>$5.990</h3>
+            <p class="card-text">Placas de aluminio anodizado medianas </p>
+          </div>
+          <div class="container">
+            <img src={% static 'img/añadirLogo.png' %} alt="" width="30px" height="30px"
+            style=" margin-left: 15px;">
+            <a href="#" class="btn btn-primary">Añadir al carro</a>
+            <img src={% static 'img/comprarLogo.png' %} alt="" width="30px" height="30px"
+            style=" margin-left: 15px;">
+            <a href="#" class="btn btn-primary">Comprar</a>
+          </div>
+          </div>
+      </div>
+</main>
+<br><br>
+<footer>
+  <div class="row col-12">
+      <div class="col-lg-4">
+          <img src={% static 'img/logoPrincipal.png'%} href="Inicio.html" alt="logoPet" width="60px">
+      </div>
+
+      <div class="col-lg-4">
+          <strong>Síguenos</strong>
+          <br><br>
+          <div class="row">
+              <img src={% static 'img/logoFacebook.png'%} alt="" width="30px" height="30px"
+                  style=" margin-left: 15px;">
+              <img src={% static 'img/logoWhatsapp.png'%} alt="" width="30px" height="30px" style=" margin-left: 10px;">
+              <img src={% static 'img/logoTwitter.png'%} alt="" width="30px" height="30px" style=" margin-left: 10px;">
+
+          </div>
+      </div>
+      
+      <div class="col-lg-4">
+
+        <strong>Contacto</strong>
+        <br><br>
+        <div class="row">
+            <img src={% static 'img/logoUbi.png'%} alt="" width="20px" height="20px"
+                style="margin-right: 10px; margin-left: 15px;">
+            <p>Av. Esq. Blanca 501, Maipú</p>
+        </div>
+        <div class="row">
+            <img src={% static 'img/logoTele.png'%} alt="" width="20px" height="20px"
+                style="margin-right: 10px; margin-left: 15px;">
+            <p>225554000</p>
+        </div>
+        <div class="row">
+            <img src={% static 'img/logoCorreo (1).png'%} alt="" width="20px" height="20px"
+                style="margin-right: 10px; margin-left: 15px;">
+                <p>consulta@petparadise.cl</p>
+        </div>
+        <br><br><br>
+
+        <p>Ignacio Abarca, Jose Silva &copy; Derechos Reservados 2022</p>
+    </div>
+  </div>
+</footer> 
+  </body>
+</html>

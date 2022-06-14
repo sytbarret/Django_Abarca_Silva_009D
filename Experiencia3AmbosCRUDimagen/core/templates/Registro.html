@@ -1,0 +1,272 @@
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    {% load static %}
+    <link rel="stylesheet" href={% static 'css/Estilos.css'%}>
+    
+       <!-- Latest compiled and minified CSS -->
+       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+
+       <!-- jQuery library -->
+       <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+   
+       <!-- Popper JS -->
+       <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+   
+       <!-- Latest compiled JavaScript -->
+       <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.js"></script>
+   
+    <link rel="shortcut icon" href={% static 'img/logoPrincipal.png'%}>
+    <title>Pet Paradise</title>
+
+      <script>
+
+      
+
+          $(function() 
+          {
+          $("#mi-formulario").validate({
+              rules: {
+                  name: "required",
+                  email: {
+                          required: true,
+                          email: true
+                      },
+                  pass: "required",
+                  pass2: {
+                          required: true,
+                          equalTo: "#pass"
+                      },
+                  nacionality: "required",
+                  datebirth: "required",
+                  fono: "required",
+                  
+                  }, //rules
+              messages: {
+                  name:{
+                      required: 'Ingrese su nombre.'
+                  },
+                  email:{
+                      required: 'Ingrese su correo electrónico',
+                      email: 'Formato de correo no válido'
+                  },
+                  pass:{
+                      required: 'Ingrese su contraseña',
+                      minlength: 'Porfavor ingrese 8 dígitos'
+                  },
+                  pass2:{
+                      required: 'Ingrese su contraseña',
+                      equalTo: 'Las contraseñas ingresadas no coinciden',
+                      minlength: 'Porfavor ingrese 8 dígitos'
+                  },
+                  nacionality:{
+                      required: 'Ingrese su nacionalidad'
+                  },
+                  datebirth:{
+                      required: 'Seleccione su fecha de nacimiento.'
+                  },
+                  fono:{
+                      required: 'Ingrese su número telefónico.',
+                      minlength: 'Ingrese un número válido porfavor. (912341234)'
+                  }
+              }//messages
+          }); //$('#mi-formulario').validate
+      }); //function    
+    
+      </script>
+  </head>
+  <body id="bg" style="background-image: url('{% static "img/fondo.jpg" %}');">
+    {% load static %}
+    <header>
+      <div class="container-fluid">
+          <div class="row" >
+            <div class="col-xl-4"  style="background-color:white">
+                    <a href={% url 'Inicio' %}>  <!--PENDIENTE-->
+                      <img src={% static 'img/logoPrincipal.png'%} width="100" height="100" class="d-inline-block align-top" alt="">                  
+                    </a>
+            </div>
+            <thead>
+              <div class="col-xl-4"  style="background-color:white">
+                <table class="default">
+
+                  <tr>                   
+                    <td></td>                   
+                    <td><h1 id="tituloPrincipal">Pet Paradise</h1></td>                    
+                    <td></td>                   
+                  </tr>
+                <br>
+                <br>
+                  <tr>                    
+                    <td></td>                   
+                    <td><h5 id="paraTexto">Fundación sin fines de lucro</h5></td>                    
+                    <td></td>                    
+                  </tr>
+                </table>
+            </div>
+            <div class="col-xl-4"  style="background-color:white">
+            </div>        
+            </div>
+        </div>
+   </div>
+</header>
+
+  <main>
+    <hr>
+
+    <hr>
+
+    <div class="container-fluid" id="navegador">
+      
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="Inicio.html">
+        <img src={% static 'img/logo.png'%} alt="" width="100px" height="100px">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href={% url 'Inicio'%}>Inicio <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href={% url 'Registro'%}>Registrate</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href={% url 'Galeria'%}>Productos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href={% url 'Somos'%}>Quienes Somos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href={% url 'Contacto'%}>Contacto</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href={% url 'calculadora'%}>Utilidades</a>
+          </li>
+          <li class="nav-item">
+          <a class="nav-link" href={% url 'apiMonedas'%}>Valor Moneda</a>
+        </li>
+        </ul>
+      </div>
+    </nav>
+</div>
+<br><br><br>
+<div class="row jumbotron" id="qSomos">
+    <div class="col-lg-12">
+      <div id="caja">
+        <h1 id="txtQuienes" onmouseover="style.color = 'green'" onmouseout="style.color= 'orange'">Registrate es gratis!</h1><br>
+        <h2 class="lead"><strong>Completa el formulario</strong></h2>
+        <hr>
+        <form id="mi-formulario"  method="post">
+      
+            <div class="form-group">
+            <label>Nombre : </label>
+            <input type="text" name="name" id="name" class="form-control" onfocus="CambiaColor(this)" required>
+            </div>
+            <hr>
+            <div class="form-group">
+                <label>Correo Electrónico: </label>
+                <input type="text" name="email" id="email" class="form-control" onfocus="CambiaColor(this)" required placeholder="nombre@dominio.cl">
+            </div>
+            <hr>
+            <div class="form-group">
+            <label>Contraseña : </label>
+            <input type="password" name="pass" id="pass" class="form-control" onfocus="CambiaColor(this)" minlength="8" required>
+            </div>
+            <hr>
+            <div class="form-group">
+                <label>Confirme contraseña: </label>
+                <input type="password" class="form-control" name="pass2" id="pass2" onfocus="CambiaColor(this)" minlength="8">
+            </div>
+            <hr>
+            <div class="form-group">
+                <label>Nacionalidad: </label>
+                <input type="text" name="nacionality" id="nacionality" class="form-control" onfocus="CambiaColor(this)" required>
+            </div>
+            <hr>
+            <label>Seleccione su sexo:</label><br>
+                <div class="form-check-inline">
+                  <label class="form-check-label" for="radio1">
+                    <input type="radio" class="form-check-input" id="sexo1" name="optSexo" value="Masculino" checked>Masculino
+                  </label>
+                </div>
+                <div class="form-check-inline">
+                  <label class="form-check-label" for="radio2">
+                    <input type="radio" class="form-check-input" id="sexo2" name="optSexo" value="Femenino">Femenino
+                  </label>
+                </div>
+            <hr>
+                <label>Fecha de nacimiento: </label>
+                <input type="date" name="datebirth" id="datebirth" max="2022-05-06" required>
+            <hr>
+            <div class="form-group">
+                <label>Telefono: </label>
+                <input type="number" name="fono" id="fono" class="form-control"  minlength="9" onfocus="CambiaColor(this)" required>
+                </div>
+            <hr>
+
+            
+            
+            <button type="submit" class="btn btn-success">Aceptar</button>
+            <button type="reset" class="btn btn-danger">Limpiar</button>
+          </form>
+        </div>
+    </div>
+  </div>
+
+</main>
+<br><br>
+<footer>
+  <div class="row col-12">
+      <div class="col-lg-4">
+          <img src={% static 'img/logoPrincipal.png'%} href={% url 'Inicio' %} alt="logoPet" width="60px">
+      </div>
+
+      <div class="col-lg-4">
+          <strong>Síguenos</strong>
+          <br><br>
+          <div class="row">
+              <img src={% static 'img/logoFacebook.png'%} alt="" width="30px" height="30px"
+                  style=" margin-left: 15px;">
+              <img src={% static 'img/logoWhatsapp.png'%} alt="" width="30px" height="30px" style=" margin-left: 10px;">
+              <img src={% static 'img/logoTwitter.png'%} alt="" width="30px" height="30px" style=" margin-left: 10px;">
+
+          </div>
+      </div>
+      
+      <div class="col-lg-4">
+
+        <strong>Contacto</strong>
+        <br><br>
+        <div class="row">
+            <img src={% static 'img/logoUbi.png'%} alt="" width="20px" height="20px"
+                style="margin-right: 10px; margin-left: 15px;">
+            <p>Av. Esq. Blanca 501, Maipú</p>
+        </div>
+        <div class="row">
+            <img src={% static 'img/logoTele.png'%} alt="" width="20px" height="20px"
+                style="margin-right: 10px; margin-left: 15px;">
+            <p>225554000</p>
+        </div>
+        <div class="row">
+            <img src={% static 'img/logoCorreo (1).png'%} alt="" width="20px" height="20px"
+                style="margin-right: 10px; margin-left: 15px;">
+                <p>consulta@petparadise.cl</p>
+        </div>
+        <br><br><br>
+
+        <p>Ignacio Abarca, Jose Silva &copy; Derechos Reservados 2022</p>
+    </div>
+  </div>
+</footer>
+
+  </body>
+</html>
